@@ -6,14 +6,15 @@ import Recognition
 
 conn = sqlite3.connect('users.db')
 c = conn.cursor()
-d = conn.cursor()
+auth = conn.cursor()
+
 def login():
     email = input("Enter Your Email: ")
     password = input("Enter password: ")
-    d.execute("select *from users where email=? and password=?",(email,password))
+    auth.execute("select *from users where email=? and password=?",(email,password))
     c.execute("select *from users")
     rows = c.fetchall()#names
-    userauth = d.fetchall()[0][2]
+    userauth = auth.fetchall()[0][2]
 
     for row in rows:
         names.append(row[2])
