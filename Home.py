@@ -27,8 +27,6 @@ def login():
         print("Sorry! We are Unable to find Your Profile")
 
 
-
-
 regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 
 names=[]
@@ -67,5 +65,5 @@ while True:
 
             break
     except:
-        print("Sorry invalid input please try again")
+        print("Sorry invalid input or Existing Email.... please try again")
         print("1. Login \n2. Sign up\nEnter your choice: ")

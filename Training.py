@@ -25,7 +25,6 @@ def Train():
             for (x,y,w,h) in faces:
                 faceSamples.append(img_numpy[y:y+h,x:x+w])
                 ids.append(id)
-
         return faceSamples,ids
 
     print ("[INFO] Training faces. It will take a few seconds. Wait ...")

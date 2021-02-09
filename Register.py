@@ -8,14 +8,10 @@ def registerFace(face_id):
     cam = cv2.VideoCapture(0)#0 is the index of our camera device
     cam.set(3, 640) # set video width
     cam.set(4, 480) # set video height
-
     face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
     print("[INFO] Initializing face capture. Look at the camera (Look straight, Left and Right for better Results)...")
-
     vidStream = cv2.VideoCapture(0)
     count = 0
-
     while(True):
         ret, img = vidStream.read()
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
